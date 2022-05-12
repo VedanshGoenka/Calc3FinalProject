@@ -6,6 +6,9 @@ mu_a = 1
 m = 1
 g = 1
 
+pi = math.pi
+e = math.e
+
 
 def alpha(r, theta, V_x):
     return V_x / (r * theta)
@@ -24,8 +27,8 @@ def delta(r, theta, m, mu_d, mu_f, mu_a):
 
 
 def func_t(t, a, b, c, d):
-    return a * (t ** 2) * (math.e ** (-b * t)) + ((1 - (math.e ** (-b * t))) * ((c * t ** 2) + d)) - t
+    return a * (t ** 2) * (e ** (-b * t)) + ((1 - (e ** (-b * t))) * ((c * t ** 2) + d)) - t
 
 
 def func_dt(t, a, b, c, d):
-    return (math.e ** (-b * t)) * ((((2 * c) - 1) * math.e ** (b * t)) + (((c - a) * ((b * t) - 2) * t) + b * d))
+    return (e ** (-b * t)) * ((((2 * c) - 1) * e ** (b * t)) + (((c - a) * ((b * t) - 2) * t) + b * d))
