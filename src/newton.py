@@ -13,4 +13,4 @@ def nextT(t_est, f, f_prime, a, b, c, d, iterations, r, theta, V_x, mu_f, mu_a, 
                            b(r, mu_f, mu_a, mu_d, m),
                            c(r, theta, m, g, mu_a),
                            d(r, theta, m, mu_d, mu_f, mu_a))
-    return t_est
+    return t_est[0]
