@@ -2,7 +2,9 @@ from src.equationsAndVariables import *
 from src.newton import *
 from src.track import *
 
-xStartPos = int(len(track1) / 2)
+# xStartPos = int(len(track1) / 2)
+
+xStartPos = 0
 ySegment = 0
 lapTime = 0
 
@@ -61,12 +63,21 @@ def newfinalspeed(rad, theta, deltaT):
 
 
 def maxSpeed(r):
-    asdf = ((mu_f * m * g)/((m/r) - (mu_f*mu_a))) ** 0.5
+    asdf = ((mu_f * m * g) / ((m / r) - (mu_f * mu_a))) ** 0.5
     print("banana " + str(asdf))
     return asdf
 
 
+def flipTrack(_yIndex, _xIndex):
+    if _yIndex == 21:
+        return abs(_xIndex - 8)
+    return _xIndex
+
+
 def increment(_xHistory, _xStartPos, _V_list, _v_temp, _laptime, dt, _y_seg):
-    _xHistory.append(_xStartPos)
+    if _y_seg < 21:
+        _xHistory.append(_xStartPos)
+    else:
+        _xHistory.append(abs(8 - _xStartPos))
     _V_list.append(_v_temp)
     return _laptime + dt, _y_seg + 1

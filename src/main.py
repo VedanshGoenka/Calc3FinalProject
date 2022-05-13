@@ -17,6 +17,7 @@ if __name__ == "__main__":
         # print("xHistory: %s\nxStartPos: %s\nV_list: %s\nV_temp: %s\nlapTime: %s\nT_temp: %s\nySegment: %s"
         #       % (str(xHistory), str(xStartPos), str(V_list), str(V_temp), str(lapTime), str(T_temp), str(ySegment)))
         lapTime, ySegment = increment(xHistory, xStartPos, V_list, V_temp, lapTime, T_temp, ySegment)
+        xStartPos = flipTrack(ySegment, xStartPos)
         # print("xHistory: %s\nxStartPos: %s\nV_list: %s\nV_temp: %s\nlapTime: %s\nT_temp: %s\nySegment: %s"
         #       % (str(xHistory), str(xStartPos), str(V_list), str(V_temp), str(lapTime), str(T_temp), str(ySegment)))
     print("xHistory: %s\nxStartPos: %s\nV_list: %s\nV_temp: %s\nlapTime: %s\nT_temp: %s\nySegment: %s"

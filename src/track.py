@@ -6,8 +6,8 @@ from src.equationsAndVariables import pi
 
 dR = 1.722
 dRTotal = 9
-rA = [20.41800] * 20
-tA = [0.080372412] * len(rA)
+rA = [20.41800] * 21 + [49.7218] * 9
+tA = [0.080372412] * 20 + [0.145333566813] * 1 + [0.03324503159191] * 9
 
 
 def track(_dR, _dRTotal, _rA, _tA):
