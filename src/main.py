@@ -12,6 +12,7 @@ if __name__ == "__main__":
         xPotential = genXPot(xStartPos)
         # print("xPotential: " + str(xPotential))
         T_temp, xStartPos, V_temp = selectOptimalTime(calcsteptime, xStartPos, xPotential, ySegment, V_list, 500, track)
+        print(T_temp)
         # print("T_temp: %s\nxStartPos: %s\nV_temp: %s" % (str(T_temp), str(xStartPos), str(V_temp)))
         # print("xHistory: %s\nxStartPos: %s\nV_list: %s\nV_temp: %s\nlapTime: %s\nT_temp: %s\nySegment: %s"
         #       % (str(xHistory), str(xStartPos), str(V_list), str(V_temp), str(lapTime), str(T_temp), str(ySegment)))
