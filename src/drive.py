@@ -22,10 +22,9 @@ def calcsteptime(_track, x_init, x_fin, _ySegment, _V_l, iterVal):
     radius = (_track[x_init][_ySegment][0] + _track[x_fin][_ySegment][0]) / 2  # Average gives the r + dr/2
     theta = _track[x_init][_ySegment][1]
     timeGuess = (radius * theta) / _V_l[_ySegment]  # if v = d/t, then t = d/v. time given no input
-    tActual = nextT(timeGuess, func_t, func_dt, alpha, beta, gamma, delta, iterVal, radius, theta, _V_l, mu_f, mu_a,
+    tActual = nextT(timeGuess, func_t, func_dt, alpha, beta, gamma, delta, iterVal, radius, theta, _V_l[0], mu_f, mu_a,
                     mu_d, m, g)
     newSpeed = newfinalspeed(radius, theta, tActual)
-    print(timeGuess - tActual)
     return tActual, newSpeed
 
 
