@@ -9,7 +9,7 @@ g = 9.8067  # 9.8067 m/s
 pi = math.pi
 e = math.e
 
-V_o = 300 / 3.6  # 300 km/h --> m/s
+V_o = 100 / 3.6  # 100 km/h --> m/s
 
 
 def alpha(r, theta, V_x):
