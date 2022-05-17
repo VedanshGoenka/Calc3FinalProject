@@ -63,9 +63,9 @@ def newfinalspeed(rad, theta, deltaT):
 
 
 def maxSpeed(r):
-    asdf = ((mu_f * m * g) / ((m / r) - (mu_f * mu_a))) ** 0.5
-    print("banana " + str(asdf))
-    return asdf
+    speed = ((mu_f * m * g) / ((m / r) - (mu_f * mu_a))) ** 0.5
+    print("Max Speed: " + str(speed))
+    return speed
 
 
 def flipTrack(_yIndex, _xIndex):

@@ -1,7 +1,3 @@
-import numpy as np
-
-from src.equationsAndVariables import pi
-
 # First corner from Saudi Arabia GP
 
 dR = 1.722
